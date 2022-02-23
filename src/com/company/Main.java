@@ -22,11 +22,18 @@ public class Main {
                 ArrayList<ArrayList<String>> result = solution(file);
 
                 //print file
+                if (result != null) {
                 fileEditor.writeFile(result);
+                }else {
+                    System.out.println("No solution found for : " + fileNames[i]);
+                }
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());
             }
         }
+
+
+
     }
 
     //solution method, returns null

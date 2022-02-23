@@ -31,15 +31,16 @@ public class FileEditor {
                 lines.add(new ArrayList<>(Arrays.stream(line.split(" ")).collect(Collectors.toList())));
             }
             bufferedReader.close();
+            System.out.println(getReadFileName() +" : File read successfully");
             return lines;
         } catch (Exception e) {
-            System.out.println("File not found");
+            System.out.println(getReadFileName() + " : File not found");
         } finally {
             if (bufferedReader != null) {
                 try {
                     bufferedReader.close();
                 } catch (Exception e) {
-                    System.out.println("Error while closing the file");
+                    System.out.println(getReadFileName() + " : Error while closing the file");
                 }
             }
         }
@@ -56,19 +57,19 @@ public class FileEditor {
                 }
                 fileWriter.write("\n");
             }
+            System.out.println(getWriteFileName() +" : File written successfully");
             fileWriter.close();
         } catch (Exception e) {
-            System.out.println("File not found");
+            System.out.println(getWriteFileName() + " : File not found");
         } finally {
             if (fileWriter != null) {
                 try {
                     fileWriter.close();
                 } catch (Exception e) {
-                    System.out.println("Error while closing the file");
+                    System.out.println(getWriteFileName() + " : Error while closing the file");
                 }
             }
         }
-
     }
 
     public String getReadFileName() {
