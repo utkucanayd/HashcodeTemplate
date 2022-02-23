@@ -19,15 +19,19 @@ public class Main {
                 //read file and save to 2 dimensional arraylist
                 ArrayList<ArrayList<String>> file = fileEditor.readFile();
 
-                /*
-                Solution is here
-                 */
+                ArrayList<ArrayList<String>> result = solution(file);
 
                 //print file
-                fileEditor.writeFile(file);
+                fileEditor.writeFile(result);
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());
             }
         }
     }
+
+    //solution method, returns null
+    public static ArrayList<ArrayList<String>> solution(ArrayList<ArrayList<String>> file) {
+        return null;
+    }
+
 }
